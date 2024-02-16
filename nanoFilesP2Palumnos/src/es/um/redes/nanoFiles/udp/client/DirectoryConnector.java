@@ -212,10 +212,10 @@ public class DirectoryConnector {
 			String[] datos = respuestaString.split("&");
 			String operacion = datos[0];
 			String sessionKeyAux = datos[1];
-			int sessionKey = Integer.parseInt(sessionKeyAux);
 			// TODO: 7.Devolver éxito/fracaso de la operación
 			if(operacion.equals("loginok")) {
-				System.out.println("Login existoso. SessionKey: " + sessionKey);
+				this.sessionKey = Integer.parseInt(sessionKeyAux);
+				System.out.println("Login existoso. SessionKey: " + this.sessionKey);
 				success = true;
 			} else {
 				System.err.println("Login fallido.");
