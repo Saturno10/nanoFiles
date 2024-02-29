@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><!--Created with JFLAP 7.1.--><structure>
+	<type>fa</type>
+	<automaton>
+		<!--The list of states.-->
+		<state id="0" name="q0">
+			<x>273.0</x>
+			<y>224.0</y>
+			<initial/>
+		</state>
+		<state id="1" name="q1">
+			<x>469.0</x>
+			<y>224.0</y>
+		</state>
+		<state id="2" name="q2">
+			<x>636.0</x>
+			<y>229.0</y>
+			<final/>
+		</state>
+		<state id="3" name="q3">
+			<x>273.0</x>
+			<y>112.0</y>
+		</state>
+		<state id="4" name="q4">
+			<x>761.0</x>
+			<y>10.0</y>
+		</state>
+		<state id="5" name="q5">
+			<x>441.0</x>
+			<y>352.0</y>
+		</state>
+		<state id="6" name="q6">
+			<x>637.0</x>
+			<y>515.0</y>
+		</state>
+		<state id="7" name="q7">
+			<x>947.0</x>
+			<y>237.0</y>
+		</state>
+		<!--The list of transitions.-->
+		<transition>
+			<from>0</from>
+			<to>0</to>
+			<read>rcv(usrlist)</read>
+		</transition>
+		<transition>
+			<from>2</from>
+			<to>5</to>
+			<read>rcv(logout) &amp;&amp; validSessionKey</read>
+		</transition>
+		<transition>
+			<from>0</from>
+			<to>1</to>
+			<read>rcv(login)</read>
+		</transition>
+		<transition>
+			<from>2</from>
+			<to>6</to>
+			<read>rcv(usrlist) &amp;&amp; validSessionKey</read>
+		</transition>
+		<transition>
+			<from>4</from>
+			<to>2</to>
+			<read>snd(logout_failed)</read>
+		</transition>
+		<transition>
+			<from>2</from>
+			<to>4</to>
+			<read>rcv(logout) &amp;&amp; invalidSessionKey</read>
+		</transition>
+		<transition>
+			<from>1</from>
+			<to>0</to>
+			<read>snd(login_failed)</read>
+		</transition>
+		<transition>
+			<from>5</from>
+			<to>0</to>
+			<read>snd(logout_ok)</read>
+		</transition>
+		<transition>
+			<from>3</from>
+			<to>2</to>
+			<controlx>388</controlx>
+			<controly>19</controly>
+			<read>snd(login_failed)</read>
+		</transition>
+		<transition>
+			<from>1</from>
+			<to>2</to>
+			<read>snd(login_ok)</read>
+		</transition>
+		<transition>
+			<from>7</from>
+			<to>2</to>
+			<read>snd(usrlist_failed)</read>
+		</transition>
+		<transition>
+			<from>2</from>
+			<to>3</to>
+			<controlx>331</controlx>
+			<controly>78</controly>
+			<read>rcv(login)</read>
+		</transition>
+		<transition>
+			<from>6</from>
+			<to>2</to>
+			<read>snd(usrlist_ok)</read>
+		</transition>
+		<transition>
+			<from>2</from>
+			<to>7</to>
+			<read>rcv(usrlist) &amp;&amp; invalidSessionKey</read>
+		</transition>
+		<transition>
+			<from>0</from>
+			<to>0</to>
+			<read>rcv(logout)</read>
+		</transition>
+	</automaton>
+</structure>
