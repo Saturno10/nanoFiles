@@ -42,8 +42,8 @@
 			<y>163.0</y>
 		</state>
 		<state id="8" name="q8">
-			<x>1110.0</x>
-			<y>473.0</y>
+			<x>1098.0</x>
+			<y>424.0</y>
 			<label>descargar</label>
 		</state>
 		<state id="9" name="q9">
@@ -76,8 +76,8 @@
 			<label>ser servidor fondo</label>
 		</state>
 		<state id="15" name="q15">
-			<x>1033.0</x>
-			<y>666.0</y>
+			<x>988.0</x>
+			<y>779.0</y>
 		</state>
 		<state id="16" name="q16">
 			<x>379.0</x>
@@ -95,13 +95,13 @@
 			<y>646.0</y>
 		</state>
 		<state id="19" name="q19">
-			<x>623.0</x>
-			<y>844.0</y>
+			<x>738.0</x>
+			<y>794.0</y>
 			<label>userlist</label>
 		</state>
 		<state id="20" name="q20">
-			<x>901.0</x>
-			<y>834.0</y>
+			<x>983.0</x>
+			<y>913.0</y>
 		</state>
 		<state id="21" name="q21">
 			<x>163.0</x>
@@ -147,6 +147,7 @@
 		<state id="30" name="q30">
 			<x>1307.0</x>
 			<y>404.0</y>
+			<label>buscar</label>
 		</state>
 		<state id="31" name="q31">
 			<x>1310.0</x>
@@ -160,181 +161,28 @@
 			<x>776.0</x>
 			<y>1081.0</y>
 		</state>
+		<state id="34" name="q34">
+			<x>1086.0</x>
+			<y>805.0</y>
+			<label>downloadfrom</label>
+		</state>
+		<state id="35" name="q35">
+			<x>1521.0</x>
+			<y>575.0</y>
+		</state>
+		<state id="36" name="q36">
+			<x>996.0</x>
+			<y>1032.0</y>
+		</state>
+		<state id="37" name="q37">
+			<x>1307.0</x>
+			<y>1021.0</y>
+		</state>
 		<!--The list of transitions.-->
 		<transition>
-			<from>30</from>
-			<to>31</to>
-			<read>timeout</read>
-		</transition>
-		<transition>
-			<from>2</from>
-			<to>1</to>
-			<read>snd(login)</read>
-		</transition>
-		<transition>
-			<from>26</from>
-			<to>12</to>
-			<read>rcv(publish_failed)</read>
-		</transition>
-		<transition>
-			<from>14</from>
-			<to>3</to>
-			<read>timeout_5</read>
-		</transition>
-		<transition>
-			<from>27</from>
-			<to>26</to>
-			<read>snd(publish)</read>
-		</transition>
-		<transition>
-			<from>3</from>
-			<to>14</to>
-			<read>snd(bserve)</read>
-		</transition>
-		<transition>
-			<from>19</from>
-			<to>16</to>
-			<read>rcv(usrlist_ok)</read>
-		</transition>
-		<transition>
-			<from>16</from>
-			<to>23</to>
-			<read>rcv(download)</read>
-		</transition>
-		<transition>
-			<from>31</from>
-			<to>30</to>
-			<read>snd(search)</read>
-		</transition>
-		<transition>
-			<from>10</from>
-			<to>3</to>
-			<read>rcv(fgserve_failed)</read>
-		</transition>
-		<transition>
-			<from>4</from>
-			<to>3</to>
-			<read>rcv(logout_failed)</read>
-		</transition>
-		<transition>
-			<from>6</from>
-			<to>3</to>
-			<read>rcv(usrlist_failed)</read>
-		</transition>
-		<transition>
-			<from>10</from>
-			<to>12</to>
-			<read>rcv(fgserve_ok)</read>
-		</transition>
-		<transition>
-			<from>14</from>
-			<to>15</to>
-			<read>timeout</read>
-		</transition>
-		<transition>
-			<from>14</from>
-			<to>16</to>
-			<read>rcv(bgserve_ok)</read>
-		</transition>
-		<transition>
-			<from>33</from>
-			<to>32</to>
-			<read>snd(search)</read>
-		</transition>
-		<transition>
-			<from>16</from>
-			<to>17</to>
-			<read>snd(logout)</read>
-		</transition>
-		<transition>
-			<from>3</from>
-			<to>30</to>
-			<read>snd(search)</read>
-		</transition>
-		<transition>
-			<from>5</from>
-			<to>4</to>
-			<read>snd(logout)</read>
-		</transition>
-		<transition>
-			<from>30</from>
-			<to>3</to>
-			<read>timeout_5</read>
-		</transition>
-		<transition>
-			<from>26</from>
-			<to>27</to>
-			<read>timeout</read>
-		</transition>
-		<transition>
-			<from>22</from>
-			<to>21</to>
-			<read>snd(download)</read>
-		</transition>
-		<transition>
-			<from>23</from>
-			<to>16</to>
-			<read>snd(file_not_found)</read>
-		</transition>
-		<transition>
-			<from>32</from>
-			<to>33</to>
-			<read>timeout</read>
-		</transition>
-		<transition>
-			<from>32</from>
-			<to>16</to>
-			<read>timeout_5</read>
-		</transition>
-		<transition>
-			<from>3</from>
-			<to>10</to>
-			<read>snd(fgserve)</read>
-		</transition>
-		<transition>
-			<from>16</from>
-			<to>32</to>
-			<read>snd(search)</read>
-		</transition>
-		<transition>
-			<from>18</from>
-			<to>17</to>
-			<read>snd(logout)</read>
-		</transition>
-		<transition>
-			<from>16</from>
-			<to>24</to>
-			<read>snd(stopserver)</read>
-		</transition>
-		<transition>
-			<from>10</from>
-			<to>11</to>
-			<read>timeout</read>
-		</transition>
-		<transition>
-			<from>28</from>
-			<to>16</to>
-			<read>rcv(publish_ok)</read>
-		</transition>
-		<transition>
-			<from>13</from>
-			<to>12</to>
-			<read>snd(file_not_found)</read>
-		</transition>
-		<transition>
-			<from>17</from>
-			<to>0</to>
-			<read>rcv(logout_ok)</read>
-		</transition>
-		<transition>
-			<from>21</from>
-			<to>16</to>
-			<read>timeout_5</read>
-		</transition>
-		<transition>
 			<from>8</from>
-			<to>9</to>
-			<read>timeout</read>
+			<to>3</to>
+			<read>rcv(file_not_found)</read>
 		</transition>
 		<transition>
 			<from>24</from>
@@ -342,54 +190,24 @@
 			<read>rcv(stopserver_ok)</read>
 		</transition>
 		<transition>
-			<from>16</from>
-			<to>28</to>
-			<read>snd(publish)</read>
-		</transition>
-		<transition>
 			<from>8</from>
-			<to>3</to>
-			<read>rcv(server_not_found)</read>
-		</transition>
-		<transition>
-			<from>12</from>
-			<to>13</to>
-			<read>rcv(download)</read>
-		</transition>
-		<transition>
-			<from>8</from>
-			<to>3</to>
-			<read>timeout_5</read>
-		</transition>
-		<transition>
-			<from>6</from>
-			<to>3</to>
-			<read>rcv(usrlist_ok)</read>
-		</transition>
-		<transition>
-			<from>4</from>
-			<to>3</to>
-			<read>timeout_5</read>
+			<to>9</to>
+			<read>timeout</read>
 		</transition>
 		<transition>
 			<from>28</from>
 			<to>16</to>
-			<read>timeout_5</read>
+			<read>rcv(publish_failed)</read>
 		</transition>
 		<transition>
-			<from>32</from>
+			<from>17</from>
 			<to>16</to>
-			<read>rcv(search_ok)</read>
+			<read>rcv(logout_failed)</read>
 		</transition>
 		<transition>
-			<from>24</from>
-			<to>25</to>
-			<read>timeout</read>
-		</transition>
-		<transition>
-			<from>30</from>
-			<to>3</to>
-			<read>rcv(search_ok)</read>
+			<from>5</from>
+			<to>4</to>
+			<read>snd(logout)</read>
 		</transition>
 		<transition>
 			<from>19</from>
@@ -402,29 +220,69 @@
 			<read>snd(login)</read>
 		</transition>
 		<transition>
-			<from>14</from>
+			<from>6</from>
 			<to>3</to>
-			<read>rcv(bgserve_failed)</read>
+			<read>rcv(usrlist_failed)</read>
 		</transition>
 		<transition>
-			<from>3</from>
-			<to>4</to>
-			<read>snd(logout)</read>
+			<from>24</from>
+			<to>16</to>
+			<read>rcv(stopserver_failed)</read>
+		</transition>
+		<transition>
+			<from>36</from>
+			<to>16</to>
+			<read>rcv(server_not_found)</read>
 		</transition>
 		<transition>
 			<from>21</from>
 			<to>16</to>
-			<read>rcv(file_not_found)</read>
+			<read>rcv(file)</read>
 		</transition>
 		<transition>
-			<from>29</from>
-			<to>28</to>
-			<read>snd(publish)</read>
+			<from>8</from>
+			<to>3</to>
+			<read>rcv(fragmento/s)</read>
 		</transition>
 		<transition>
-			<from>20</from>
-			<to>19</to>
-			<read>snd(usrlist)</read>
+			<from>34</from>
+			<to>3</to>
+			<read>rcv(file)</read>
+		</transition>
+		<transition>
+			<from>26</from>
+			<to>12</to>
+			<read>timeout_5</read>
+		</transition>
+		<transition>
+			<from>18</from>
+			<to>17</to>
+			<read>snd(logout)</read>
+		</transition>
+		<transition>
+			<from>32</from>
+			<to>33</to>
+			<read>timeout</read>
+		</transition>
+		<transition>
+			<from>3</from>
+			<to>34</to>
+			<read>snd(downloadfrom)</read>
+		</transition>
+		<transition>
+			<from>36</from>
+			<to>16</to>
+			<read>timeout_5</read>
+		</transition>
+		<transition>
+			<from>2</from>
+			<to>1</to>
+			<read>snd(login)</read>
+		</transition>
+		<transition>
+			<from>3</from>
+			<to>8</to>
+			<read>snd(download)</read>
 		</transition>
 		<transition>
 			<from>1</from>
@@ -432,7 +290,142 @@
 			<read>rcv(login_ok)</read>
 		</transition>
 		<transition>
+			<from>16</from>
+			<to>32</to>
+			<read>snd(search)</read>
+		</transition>
+		<transition>
+			<from>34</from>
+			<to>35</to>
+			<read>timeout</read>
+		</transition>
+		<transition>
+			<from>19</from>
+			<to>16</to>
+			<read>timeout_5</read>
+		</transition>
+		<transition>
+			<from>17</from>
+			<to>18</to>
+			<read>timeout</read>
+		</transition>
+		<transition>
+			<from>6</from>
+			<to>3</to>
+			<read>timeout_5</read>
+		</transition>
+		<transition>
+			<from>17</from>
+			<to>0</to>
+			<read>rcv(logout_ok)</read>
+		</transition>
+		<transition>
+			<from>1</from>
+			<to>0</to>
+			<read>timeout_5</read>
+		</transition>
+		<transition>
+			<from>9</from>
+			<to>8</to>
+			<read>snd(download)</read>
+		</transition>
+		<transition>
 			<from>10</from>
+			<to>12</to>
+			<read>rcv(fgserve_ok)</read>
+		</transition>
+		<transition>
+			<from>15</from>
+			<to>14</to>
+			<read>snd(bgserve)</read>
+		</transition>
+		<transition>
+			<from>36</from>
+			<to>37</to>
+			<read>timeout</read>
+		</transition>
+		<transition>
+			<from>36</from>
+			<to>16</to>
+			<read>rcv(file_not_found)</read>
+		</transition>
+		<transition>
+			<from>4</from>
+			<to>3</to>
+			<read>rcv(logout_failed)</read>
+		</transition>
+		<transition>
+			<from>26</from>
+			<to>12</to>
+			<read>rcv(publish_failed)</read>
+		</transition>
+		<transition>
+			<from>3</from>
+			<to>30</to>
+			<read>snd(search)</read>
+		</transition>
+		<transition>
+			<from>8</from>
+			<to>3</to>
+			<read>timeout_5</read>
+		</transition>
+		<transition>
+			<from>4</from>
+			<to>5</to>
+			<read>timeout</read>
+		</transition>
+		<transition>
+			<from>1</from>
+			<to>2</to>
+			<read>timeout</read>
+		</transition>
+		<transition>
+			<from>11</from>
+			<to>10</to>
+			<read>snd(fgserve)</read>
+		</transition>
+		<transition>
+			<from>36</from>
+			<to>16</to>
+			<read>rcv(fragmento/s)</read>
+		</transition>
+		<transition>
+			<from>19</from>
+			<to>20</to>
+			<read>timeout</read>
+		</transition>
+		<transition>
+			<from>3</from>
+			<to>10</to>
+			<read>snd(fgserve)</read>
+		</transition>
+		<transition>
+			<from>28</from>
+			<to>16</to>
+			<read>timeout_5</read>
+		</transition>
+		<transition>
+			<from>28</from>
+			<to>29</to>
+			<read>timeout</read>
+		</transition>
+		<transition>
+			<from>27</from>
+			<to>26</to>
+			<read>snd(publish)</read>
+		</transition>
+		<transition>
+			<from>4</from>
+			<to>0</to>
+			<read>rcv(logout_ok)</read>
+		</transition>
+		<transition>
+			<from>10</from>
+			<to>3</to>
+			<read>rcv(fgserve_failed)</read>
+		</transition>
+		<transition>
+			<from>14</from>
 			<to>3</to>
 			<read>timeout_5</read>
 		</transition>
@@ -442,109 +435,34 @@
 			<read>timeout</read>
 		</transition>
 		<transition>
-			<from>16</from>
-			<to>19</to>
-			<read>snd(usrlist)</read>
-		</transition>
-		<transition>
-			<from>21</from>
-			<to>16</to>
-			<read>rcv(server_not_fount)</read>
-		</transition>
-		<transition>
-			<from>21</from>
-			<to>22</to>
+			<from>30</from>
+			<to>31</to>
 			<read>timeout</read>
 		</transition>
 		<transition>
-			<from>17</from>
-			<to>18</to>
-			<read>timeout</read>
+			<from>37</from>
+			<to>36</to>
+			<read>snd(downloadfrom)</read>
 		</transition>
 		<transition>
-			<from>17</from>
-			<to>16</to>
-			<read>rcv(logout_failed)</read>
-		</transition>
-		<transition>
-			<from>13</from>
-			<to>12</to>
-			<read>snd(file)</read>
-		</transition>
-		<transition>
-			<from>15</from>
-			<to>14</to>
-			<read>snd(bgserve)</read>
-		</transition>
-		<transition>
-			<from>24</from>
-			<to>16</to>
-			<read>rcv(stopserver_failed)</read>
-		</transition>
-		<transition>
-			<from>8</from>
+			<from>34</from>
 			<to>3</to>
 			<read>rcv(file_not_found)</read>
 		</transition>
 		<transition>
-			<from>6</from>
-			<to>3</to>
-			<read>timeout_5</read>
+			<from>14</from>
+			<to>16</to>
+			<read>rcv(bgserve_ok)</read>
 		</transition>
 		<transition>
-			<from>1</from>
-			<to>2</to>
+			<from>22</from>
+			<to>21</to>
+			<read>snd(download)</read>
+		</transition>
+		<transition>
+			<from>14</from>
+			<to>15</to>
 			<read>timeout</read>
-		</transition>
-		<transition>
-			<from>28</from>
-			<to>29</to>
-			<read>timeout</read>
-		</transition>
-		<transition>
-			<from>28</from>
-			<to>16</to>
-			<read>rcv(publish_failed)</read>
-		</transition>
-		<transition>
-			<from>1</from>
-			<to>0</to>
-			<read>rcv(login_failed)</read>
-		</transition>
-		<transition>
-			<from>17</from>
-			<to>16</to>
-			<read>timeout_5</read>
-		</transition>
-		<transition>
-			<from>7</from>
-			<to>6</to>
-			<read>snd(usrlist)</read>
-		</transition>
-		<transition>
-			<from>30</from>
-			<to>3</to>
-			<read>rcv(search_failed)</read>
-		</transition>
-		<transition>
-			<from>32</from>
-			<to>16</to>
-			<read>rcv(search_failed)</read>
-		</transition>
-		<transition>
-			<from>26</from>
-			<to>12</to>
-			<read>timeout_5</read>
-		</transition>
-		<transition>
-			<from>8</from>
-			<to>3</to>
-			<read>rcv(file)</read>
-		</transition>
-		<transition>
-			<from>24</from>
-			<to>16</to>
-			<read>timeout_5</read>
 		</transition>
 		<transition>
 			<from>23</from>
@@ -552,49 +470,39 @@
 			<read>snd(file)</read>
 		</transition>
 		<transition>
-			<from>1</from>
-			<to>0</to>
-			<read>timeout_5</read>
-		</transition>
-		<transition>
-			<from>19</from>
-			<to>20</to>
-			<read>timeout</read>
-		</transition>
-		<transition>
-			<from>19</from>
+			<from>21</from>
 			<to>16</to>
-			<read>timeout_5</read>
+			<read>rcv(file_not_found)</read>
 		</transition>
 		<transition>
-			<from>4</from>
-			<to>5</to>
-			<read>timeout</read>
+			<from>35</from>
+			<to>34</to>
+			<read>snd(downloadfrom)</read>
 		</transition>
 		<transition>
 			<from>3</from>
-			<to>8</to>
-			<read>snd(download)</read>
+			<to>4</to>
+			<read>snd(logout)</read>
 		</transition>
 		<transition>
-			<from>4</from>
-			<to>0</to>
-			<read>rcv(logout_ok)</read>
-		</transition>
-		<transition>
-			<from>25</from>
-			<to>24</to>
-			<read>snd(stopserver)</read>
+			<from>32</from>
+			<to>16</to>
+			<read>rcv(search_ok)</read>
 		</transition>
 		<transition>
 			<from>21</from>
 			<to>16</to>
-			<read>rcv(file)</read>
+			<read>rcv(fragmentos)</read>
 		</transition>
 		<transition>
-			<from>12</from>
-			<to>26</to>
-			<read>snd(publish)</read>
+			<from>30</from>
+			<to>3</to>
+			<read>rcv(search_failed)</read>
+		</transition>
+		<transition>
+			<from>19</from>
+			<to>16</to>
+			<read>rcv(usrlist_ok)</read>
 		</transition>
 		<transition>
 			<from>26</from>
@@ -602,14 +510,19 @@
 			<read>rcv(publish_ok)</read>
 		</transition>
 		<transition>
-			<from>11</from>
-			<to>10</to>
-			<read>snd(fgserve)</read>
+			<from>12</from>
+			<to>26</to>
+			<read>snd(publish)</read>
 		</transition>
 		<transition>
-			<from>9</from>
-			<to>8</to>
-			<read>snd(download)</read>
+			<from>6</from>
+			<to>3</to>
+			<read>rcv(usrlist_ok)</read>
+		</transition>
+		<transition>
+			<from>25</from>
+			<to>24</to>
+			<read>snd(stopserver)</read>
 		</transition>
 		<transition>
 			<from>16</from>
@@ -617,9 +530,199 @@
 			<read>snd(download)</read>
 		</transition>
 		<transition>
+			<from>24</from>
+			<to>16</to>
+			<read>timeout_5</read>
+		</transition>
+		<transition>
+			<from>8</from>
+			<to>3</to>
+			<read>rcv(file)</read>
+		</transition>
+		<transition>
+			<from>13</from>
+			<to>12</to>
+			<read>snd(file)</read>
+		</transition>
+		<transition>
+			<from>33</from>
+			<to>32</to>
+			<read>snd(search)</read>
+		</transition>
+		<transition>
+			<from>10</from>
+			<to>11</to>
+			<read>timeout</read>
+		</transition>
+		<transition>
+			<from>34</from>
+			<to>3</to>
+			<read>rcv(fragmento/s)</read>
+		</transition>
+		<transition>
+			<from>10</from>
+			<to>3</to>
+			<read>timeout_5</read>
+		</transition>
+		<transition>
+			<from>17</from>
+			<to>16</to>
+			<read>timeout_5</read>
+		</transition>
+		<transition>
+			<from>32</from>
+			<to>16</to>
+			<read>timeout_5</read>
+		</transition>
+		<transition>
+			<from>23</from>
+			<to>16</to>
+			<read>snd(fragmento/s)</read>
+		</transition>
+		<transition>
+			<from>14</from>
+			<to>3</to>
+			<read>rcv(bgserve_failed)</read>
+		</transition>
+		<transition>
+			<from>32</from>
+			<to>16</to>
+			<read>rcv(search_failed)</read>
+		</transition>
+		<transition>
+			<from>20</from>
+			<to>19</to>
+			<read>snd(usrlist)</read>
+		</transition>
+		<transition>
+			<from>1</from>
+			<to>0</to>
+			<read>rcv(login_failed)</read>
+		</transition>
+		<transition>
+			<from>13</from>
+			<to>12</to>
+			<read>snd(file_not_found)</read>
+		</transition>
+		<transition>
+			<from>16</from>
+			<to>17</to>
+			<read>snd(logout)</read>
+		</transition>
+		<transition>
+			<from>7</from>
+			<to>6</to>
+			<read>snd(usrlist)</read>
+		</transition>
+		<transition>
+			<from>12</from>
+			<to>13</to>
+			<read>rcv(download)</read>
+		</transition>
+		<transition>
+			<from>30</from>
+			<to>3</to>
+			<read>timeout_5</read>
+		</transition>
+		<transition>
+			<from>21</from>
+			<to>22</to>
+			<read>timeout</read>
+		</transition>
+		<transition>
+			<from>16</from>
+			<to>19</to>
+			<read>snd(usrlist)</read>
+		</transition>
+		<transition>
+			<from>24</from>
+			<to>25</to>
+			<read>timeout</read>
+		</transition>
+		<transition>
+			<from>34</from>
+			<to>3</to>
+			<read>timeout_5</read>
+		</transition>
+		<transition>
+			<from>16</from>
+			<to>36</to>
+			<read>snd(downloadfrom)</read>
+		</transition>
+		<transition>
+			<from>23</from>
+			<to>16</to>
+			<read>snd(file_not_found)</read>
+		</transition>
+		<transition>
+			<from>16</from>
+			<to>24</to>
+			<read>snd(stopserver)</read>
+		</transition>
+		<transition>
+			<from>26</from>
+			<to>27</to>
+			<read>timeout</read>
+		</transition>
+		<transition>
+			<from>36</from>
+			<to>16</to>
+			<read>rcv(file)</read>
+		</transition>
+		<transition>
+			<from>4</from>
+			<to>3</to>
+			<read>timeout_5</read>
+		</transition>
+		<transition>
 			<from>3</from>
 			<to>6</to>
 			<read>snd(usrlist)</read>
+		</transition>
+		<transition>
+			<from>28</from>
+			<to>16</to>
+			<read>rcv(publish_ok)</read>
+		</transition>
+		<transition>
+			<from>16</from>
+			<to>23</to>
+			<read>rcv(download)</read>
+		</transition>
+		<transition>
+			<from>31</from>
+			<to>30</to>
+			<read>snd(search)</read>
+		</transition>
+		<transition>
+			<from>21</from>
+			<to>16</to>
+			<read>timeout_5</read>
+		</transition>
+		<transition>
+			<from>29</from>
+			<to>28</to>
+			<read>snd(publish)</read>
+		</transition>
+		<transition>
+			<from>3</from>
+			<to>14</to>
+			<read>snd(bserve)</read>
+		</transition>
+		<transition>
+			<from>30</from>
+			<to>3</to>
+			<read>rcv(search_ok)</read>
+		</transition>
+		<transition>
+			<from>16</from>
+			<to>28</to>
+			<read>snd(publish)</read>
+		</transition>
+		<transition>
+			<from>34</from>
+			<to>3</to>
+			<read>rcv(server_not_found)</read>
 		</transition>
 	</automaton>
 </structure>
