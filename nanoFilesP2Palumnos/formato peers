@@ -1,0 +1,18 @@
+mensajes fallo
+op	
+- [1byte]
+-1	fichero no encontrado
+
+mensajes solicitud (cliente)
+op	val1		val2
+-	--------	-------- [1,8,8] bytes
+1	file		null	descargar un fichero file, dado su hash
+2	file		from	descargar un fichero file del servidor from dado su hash y el nickname del server
+3	null		null	obtener la lista de ficheros
+
+mensajes respuesta ok (servidor)
+op	len		val
+4	size		file	[1,8,size] manda un fichero entero
+5	null		list	[1,8,size] manda la lista de ficheros
+
+
