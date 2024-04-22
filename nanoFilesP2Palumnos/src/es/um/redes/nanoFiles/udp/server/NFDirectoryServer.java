@@ -398,15 +398,19 @@ public class NFDirectoryServer {
 			break;
 		}
 
-			case DirMessageOps.OPERATION_FILELIST: {
+		case DirMessageOps.OPERATION_FILELIST: {
 			int sessionKey = Integer.parseInt(msg.getSessionKey());
 			if(sessionKeys.containsKey(sessionKey)){
 				response = new DirMessage(FILELIST_OK);
 				String files = "";
-
+				Set<String> hashesInserted = new HashSet<>();
 				for(Map.Entry<Integer,HashMap<String,String>> server : publishedFiles.entrySet()) {
 					for(Map.Entry<String,String> fichero : server.getValue().entrySet()){
-						files += fichero.getKey() + "," + fichero.getValue() + ":";
+						if(!hashesInserted.contains(fichero.getKey())){
+							files += fichero.getKey() + "," + fichero.getValue() + ":";
+							hashesInserted.add(fichero.getKey());
+						}
+
 					}
 
 				}
@@ -416,6 +420,7 @@ public class NFDirectoryServer {
 				System.out.println("ERROR: Filelist failed. User not found");
 			}
 			break;
+		}
 		}
 
 
