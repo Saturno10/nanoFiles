@@ -1,0 +1,8 @@
+Entrega de nanoFiles
+Hecha por: Álvaro Aledo Tornero y Antonio Vergara Moya
+
+Documentación: carpeta con el documento de la tarea, las imágenes de los autómatas y los archivos de Wireshark.
+
+JARs: carpeta con los fichero JAR de nanoFiles y de directory. Incluye un script con el que se ejecuta un directorio y 3 nanofiles a nivel local con distintas carpetas de archivos.
+
+nanoFilesP2Palumnos: carpeta del proyecto con código fuente.
